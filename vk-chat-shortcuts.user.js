@@ -10,6 +10,8 @@
 
 (function() {
     'use strict';
+    
+    isClassicInterface = isClassicInterface || function() {};
 
     document.onkeydown = function(e) {
         e = e || window.event;
