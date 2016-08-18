@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         vk-chat-shortcuts
 // @namespace    https://github.com/thatside/vk-chat-shortcuts/
-// @version      0.2
+// @version      0.3
 // @description  Allows to change active chats with Ctrl+(1-5) (only 5 last of them)
 // @author       thatside
 // @include      *vk.com/im*
@@ -13,7 +13,6 @@
 
     document.onkeydown = function(e) {
         e = e || window.event;
-        console.log(e);
         if(e.ctrlKey) {
             var keyCode = e.which || e.keyCode;
             switch(keyCode) {
