@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         vk-chat-shortcuts
-// @namespace    http://tampermonkey.net/
-// @version      0.1
+// @namespace    https://github.com/thatside/vk-chat-shortcuts/
+// @version      0.2
 // @description  Allows to change active chats with Ctrl+(1-5) (only 5 last of them)
 // @author       thatside
 // @include      *vk.com/im*
@@ -18,32 +18,28 @@
             var keyCode = e.which || e.keyCode;
             switch(keyCode) {
                 case 49:
-                    document.getElementsByClassName('nim-dialog')[0].click();
-                    e.preventDefault();
-                    e.stopPropagation();
+                    switchDialog(e, 0);
                     break;
                 case 50:
-                    document.getElementsByClassName('nim-dialog')[1].click();
-                    e.preventDefault();
-                    e.stopPropagation();
+                    switchDialog(e, 1);
                     break;
                 case 51:
-                    document.getElementsByClassName('nim-dialog')[2].click();
-                    e.preventDefault();
-                    e.stopPropagation();
+                    switchDialog(e, 2);
                     break;
                 case 52:
-                    document.getElementsByClassName('nim-dialog')[3].click();
-                    e.preventDefault();
-                    e.stopPropagation();
+                    switchDialog(e, 3);
                     break;
                 case 53:
-                    document.getElementsByClassName('nim-dialog')[4].click();
-                    e.preventDefault();
-                    e.stopPropagation();
+                    switchDialog(e, 4);
                     break;
                 default:
             }
         }
     };
+
+    function switchDialog(event, number) {
+        document.getElementsByClassName('nim-dialog')[number].click();
+        event.preventDefault();
+        event.stopPropagation();
+    }
 })();
