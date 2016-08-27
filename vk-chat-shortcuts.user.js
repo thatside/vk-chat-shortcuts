@@ -4,7 +4,7 @@
 // @version      0.3.2
 // @description  Allows to change active chats with Ctrl+(1-5) (only 5 last of them)
 // @author       thatside
-// @include      *vk.com/im*
+// @include      *vk.com*
 // @grant        none
 // ==/UserScript==
 
